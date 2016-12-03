@@ -6,6 +6,7 @@ var CountdownForm = React.createClass({
     var strSeconds = this.refs.seconds.value;
 
     if (strSeconds.match(/^[0-9]*$/)) {
+      // (/^[1-9][0-9]*$/)) regex to stop from 0 and empty input.
       this.refs.seconds.value = '';
       this.props.onSetCountdown(parseInt(strSeconds, 10));
     }
